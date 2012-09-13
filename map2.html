@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<meta charset="utf-8">
+		<title>Local Food Mapping Test - Paul Oppenheim</title>
+		
+		<!-- Mocha Testing -->
+		<link rel="stylesheet" href="mocha.css" />
+		<style type="text/css">#mocha{display: none; background: white;} #stats{position: static;}</style>
+		<script src="myrequire.js"></script>
+		<script src="jquery-1.8.1.js"></script>
+		<script src="expect.js"></script>
+		<script src="assert.js"></script>
+		<script src="mocha.js"></script>
+		<script>mocha.setup('bdd')</script>
+		<script src="test/test.js"></script>
+		
+		<!-- Local Food Mapping -->
+		<link rel="stylesheet" href="map2.css" />
+		<script type="text/javascript" src="map2.js"></script>
+		<script type="text/javascript" src="test/test_map2.js"></script>
+		<script type="text/javascript">
+			window.onload = food_map_init;
+		</script>
+	</head>
+	<body>
+		<div class="highlineblock"></div>
+		<div class="posblock">
+			<div id="map_canvas"></div>
+		</div>
+		<!-- should be invisible until elements used in Google Map InfoWindow -->
+		<div class="jscontent">
+			<div id="infowindow_userloc">
+				<h2>Your Location</h2>
+				<p id="infowindow_userloc_coord"></p>
+				<!--
+				<p>Edit Location?</p>
+				<p>Search Radius (miles): <input type='range' id="location_radius_input" value="0.5"/></p>
+				-->
+			</div>
+		</div>
+		<a name="test">
+			<!-- should be invisible unless URL ends in #test -->
+			<div id="mocha"></div>
+		</a>
+		
+	</body>
+</html>

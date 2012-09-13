@@ -1,0 +1,89 @@
+html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: helvetica, sans-serif;
+	font-size: 10pt;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: #333;
+}
+
+
+h1, h2, h3 {
+	font-weight: 900;
+}
+p {
+	font-weight: 300;
+}
+h1 {font-size: 1.6em;}
+h2 {font-size: 1.3em;}
+h3 {font-size: 1.1em;}
+h1, h2, h3, p, ul {
+	margin-top: .3em;
+	margin-bottom: .3em;
+}
+ul {
+	padding-left: 1em;
+}
+img {
+	vertical-align: middle;
+}
+
+#map_canvas {
+	display: block;
+	margin-top: 0%;
+	height: 100%;
+}
+
+.posblock {
+	display: inline-block;
+	height: 97%;
+	width: 97%;
+	vertical-align: middle;
+}
+
+.highlineblock {
+	display: inline-block;
+	width: 0px;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+}
+
+.jscontent {display: none;}
+
+#infowindow_content {
+	margin: 0;
+	padding: 0;
+}
+	#infowindow_content h2,
+	#infowindow_content p {
+		margin: 0;
+		padding: 0;
+	}
+
+.pickup_markerhead {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.pickup_moreinfo {
+	margin-top: 0;
+	margin-bottom: .75em;
+}
+.pickup_list {
+	list-style:none;
+}
+.pickup_listitem {
+	display: inline-block;
+	margin-right: 1em;
+	list-style:none;
+}
+
+
+
