@@ -146,11 +146,11 @@ function draw_nearby_points(nearby_points) {
 		}
 		
 		function venditem(venslug, venname) {
-			return "<li class='pickup_listitem'><a href='https://www.goodeggs.com/" + venslug + "'>" + venname + "</a></li>";
+			return "<li class='pickup_listitem'><a href='https://www.goodeggs.com/" + venslug + "' target='_blank'>" + venname + "</a></li>";
 		}
 		var infohtml = '<div>'
 		infohtml += "<h2 class='pickup_markerhead'>" + addy + " </h2>"
-		infohtml += "<p class='pickup_moreinfo'><a href='http://maps.google.com/maps?q=\"" + addy + "\"'>more info »</a></p>"
+		infohtml += "<p class='pickup_moreinfo'><a href='http://maps.google.com/maps?q=\"" + addy + "\"' target='_blank'>more info »</a></p>"
 		infohtml += "<p><img src='https://goodeggs-1.a.ssl.fastly.net/img/e83be868546b08d18f23044bdd95f4ad/favicon.png' height=15 width=15> Vendors at this pickup:</p>";
 		infohtml += "<ul class='pickup_list'>"
 		for (i in vend_ids) {
