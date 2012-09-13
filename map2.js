@@ -148,9 +148,11 @@ function draw_nearby_points(nearby_points) {
 		function venditem(venslug, venname) {
 			return "<li class='pickup_listitem'><a href='https://www.goodeggs.com/" + venslug + "' target='_blank'>" + venname + "</a></li>";
 		}
-		var infohtml = '<div>'
-		infohtml += "<h2 class='pickup_markerhead'>" + addy + " </h2>"
-		infohtml += "<p class='pickup_moreinfo'><a href='http://maps.google.com/maps?q=\"" + addy + "\"' target='_blank'>more info »</a></p>"
+		var addyname = map2['addy_name_lookup'][addy];
+		var infohtml = '<div>';
+		infohtml += "<h2 class='pickup_markerhead'>" + addyname + " </h2>";
+		infohtml += "<p class='pickup_addy'>" + addy + " </p>";
+		infohtml += "<p class='pickup_moreinfo'><a href='http://maps.google.com/maps?q=\"" + addy + "\"' target='_blank'>more info »</a></p>";
 		infohtml += "<p><img src='https://goodeggs-1.a.ssl.fastly.net/img/e83be868546b08d18f23044bdd95f4ad/favicon.png' height=15 width=15> Vendors at this pickup:</p>";
 		infohtml += "<ul class='pickup_list'>"
 		for (i in vend_ids) {
@@ -291,6 +293,8 @@ function build_point_db(menus) {
 			if (!address) {
 				continue;
 			}
+			var name = menus[i]['pickups'][j]['location']['name'];
+			map2['addy_name_lookup'][address] = name;
 			// add vendor to reverse-lookup addy space
 			var vendor = {
 				"menuid": menuid,
@@ -419,6 +423,7 @@ function food_map_init() {
 	map2['address_geocodes'] = {};
 	map2['address_geocodes'] = build_address_geocodes_cache();
 	map2['addy_rev_lookup'] = {};
+	map2['addy_name_lookup'] = {};
 	load_google_maps_script();
 	// more init in maps_ready after map load
 	load_goodeggs_menus();
